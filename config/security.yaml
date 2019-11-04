@@ -1,0 +1,48 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm:        sha512
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    providers:
+        user_provider:
+            id: sogedial.oauth.user_provider
+
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+
+        oauth_token:
+            pattern:    ^/oauth/v3/token
+            security:   false
+            #anonymous: ~
+            #http_basic:
+            #    realm: "Secured Demo Area"
+
+        oauth_authorize:
+            pattern:    ^/oauth/v3/auth
+            # Add your favorite authentication process here
+            form_login:
+                provider: api_provider
+                check_path: /oauth/v3/auth_login_check
+                login_path: /oauth/v3/auth_login
+            logout:
+                 path: /oauth/v3/auth_logout
+                 target: /oauth/v3/auth_login
+            anonymous: true
+
+        api:
+            pattern:    ^/api
+            fos_oauth:  true
+            stateless:  true
+            anonymous:  false
+            #switch_user_stateless: true
+
+    access_control:
+        - { path: ^/testapi, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ] }  
