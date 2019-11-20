@@ -36,7 +36,8 @@
         "twig/twig": "^2.12"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^4.3"
+        "symfony/phpunit-bridge": "^4.3",
+        "symfony/profiler-pack": "^1.0"
     },
     "config": {
         "preferred-install": {
