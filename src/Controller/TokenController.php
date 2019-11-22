@@ -53,11 +53,6 @@ class TokenController extends BaseTokenController
     {
         try {
 
-            /**
-             * [BACK] Blocage client
-             * @author: Bardi mohamed chamseddine
-             * @JIRA CC-565 <https://oyezcc.atlassian.net/browse/CC-565>
-             */
             $user = $this->em->getRepository(User::class)->findOneBy(array("username" => $request->get("username")));
             if ($user instanceof UserCustomer) {
 
