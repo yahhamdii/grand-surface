@@ -30,6 +30,7 @@
         "symfony/form": "4.3.*",
         "symfony/framework-bundle": "4.3.*",
         "symfony/polyfill-apcu": "^1.12",
+        "symfony/security-bundle": "4.3.*",
         "symfony/templating": "4.3.*",
         "symfony/twig-pack": "^1.0",
         "symfony/web-server-bundle": "4.3.*",
