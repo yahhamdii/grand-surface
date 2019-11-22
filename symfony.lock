@@ -227,6 +227,9 @@
             "ref": "c8e0c38e1a280ab9e37587a8fa32b251d5bc1c94"
         }
     },
+    "nikic/php-parser": {
+        "version": "v4.3.0"
+    },
     "opencensus/opencensus": {
         "version": "v0.5.2"
     },
@@ -397,6 +400,15 @@
     "symfony/intl": {
         "version": "v4.3.6"
     },
+    "symfony/maker-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
+    },
     "symfony/mime": {
         "version": "v4.3.6"
     },
@@ -492,6 +504,19 @@
     },
     "symfony/twig-pack": {
         "version": "v1.0.0"
+    },
+    "symfony/validator": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "d902da3e4952f18d3bf05aab29512eb61cabd869"
+        },
+        "files": [
+            "./config/packages/test/validator.yaml",
+            "./config/packages/validator.yaml"
+        ]
     },
     "symfony/var-dumper": {
         "version": "v4.3.8"
