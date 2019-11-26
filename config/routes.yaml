@@ -1,6 +1,7 @@
-index:
-   path: /
-   controller: App\Controller\DefaultController::index
+sogedial_api:
+    resource: "../src/Controller/"
+    type:     annotation
+    prefix:   /
 # fos_oauth_server_token:
 #     resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
 

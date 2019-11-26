@@ -6,5 +6,5 @@
 #     auth_code_class:     App\Entity\AuthCode
 #     service:
 #         user_provider: sogedial.oauth.user_provider
-        # options:
-        #     supported_scopes: user
+#         options:
+#             supported_scopes: user
